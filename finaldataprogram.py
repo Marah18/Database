@@ -6,7 +6,7 @@ import mysql.connector as mysql
 import csv
 
 cnx = mysql.connect(user = 'root', password = 'MarahAwad11', 
-                    host = '127.0.0.1', database='Awad')
+                    host = '127.0.0.1')
 # cursor is an object in python makes us able to work with database
 cursor = cnx.cursor()
 # Name for the database
