@@ -40,7 +40,7 @@ def main_menu():
 
 main_menu()
 
-cnx = mysql.connector.connect(user='root', password='MarahAwad11',
+cnx = mysql.connect(user='root', password='MarahAwad11',
                               host='127.0.0.1', database=DB_NAME)
 cursor = cnx.cursor()
 
