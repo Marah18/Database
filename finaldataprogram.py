@@ -2,6 +2,7 @@ import mysql.connector as mysql
 import pandas as pd
 import string
 from matplotlib.pyplot import acorr
+import mysql.connector as mysql
 import csv
 
 cnx = mysql.connect(user = 'root', password = 'MarahAwad11', 
@@ -11,17 +12,17 @@ cursor = cnx.cursor()
 # Name for the database
 DB_NAME = 'University'
 
-try:
-    cursor.execute("create database University")
-except:
-    pass
+
 
 # cursor is an object in python makes us able to work with database
 
 try:
     cursor.execute("create database {} DEFAULT CHARACTER SET 'utf8'".format(DB_NAME))
+    print("Database created!")
+    inp = input("Press enter to show the main menu: ")
 
 except:
+    print("Database already created!")
     inp = input("Press enter to show the main menu: ")
 
 
@@ -38,8 +39,9 @@ def main_menu():
 
 
 main_menu()
-cnx = mysql.connect(user='root', password='MarahAwad11',
-                              host='127.0.0.1', database=DB_NAME)
+cnx = mysql.connect(user = 'root', password = 'MarahAwad11', 
+                    host = '127.0.0.1', database =DB_NAME)
+# cursor is an object in python makes us able to work with database
 cursor = cnx.cursor()
 
 
@@ -192,4 +194,3 @@ while query:
         print("Thank you for using this program :) ")
     else:
         main_menu()
-
