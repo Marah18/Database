@@ -12,17 +12,17 @@ cursor = cnx.cursor()
 # Name for the database
 DB_NAME = 'University'
 
-try:
-    cursor.execute("create database University")
-except:
-    pass
+
 
 # cursor is an object in python makes us able to work with database
 
 try:
     cursor.execute("create database {} DEFAULT CHARACTER SET 'utf8'".format(DB_NAME))
+    print("Database created!")
+    inp = input("Press enter to show the main menu: ")
 
 except:
+    print("Database already created!")
     inp = input("Press enter to show the main menu: ")
 
 
