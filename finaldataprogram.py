@@ -5,7 +5,7 @@ from matplotlib.pyplot import acorr
 import mysql.connector as mysql
 import csv
 
-cnx = mysql.connect(user = 'root', password = 'MarahAwad11', 
+cnx = mysql.connect(user = 'root', password = 'root', 
                     host = '127.0.0.1')
 # cursor is an object in python makes us able to work with database
 cursor = cnx.cursor()
